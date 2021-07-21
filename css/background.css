@@ -7,10 +7,3 @@ img {
     cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
     default;
 }
-/*#web_bg{*/
-/*    background-image: url("https://wallhaven.cc/wallpapers/tmp/temp_60f38f78905a6.png");*/
-/*}*/
-.layout>div:first-child:not(.recent-posts) {
-    /* 以下代表白色透明度为0.3 */
-    background: rgba(255,255,255,.3);
-}
