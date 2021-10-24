@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /index.php?
+
+Sitemap: https://www.zeker.top/baidu_urls.txt
