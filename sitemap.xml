@@ -2,14 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.zeker.top/link/index.html</loc>
+    <loc>https://www.zeker.top/comments/index.html</loc>
     
     <lastmod>2022-01-10</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.zeker.top/messageboard/index.html</loc>
+    <loc>https://www.zeker.top/categories/index.html</loc>
+    
+    <lastmod>2022-01-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.zeker.top/tags/index.html</loc>
     
     <lastmod>2022-01-10</lastmod>
     
@@ -17,6 +24,13 @@
   
   <url>
     <loc>https://www.zeker.top/artitalk/index.html</loc>
+    
+    <lastmod>2022-01-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.zeker.top/link/index.html</loc>
     
     <lastmod>2022-01-10</lastmod>
     
@@ -92,20 +106,6 @@
     
   </url>
   
-  <url>
-    <loc>https://www.zeker.top/categories/index.html</loc>
-    
-    <lastmod>2021-07-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.zeker.top/tags/index.html</loc>
-    
-    <lastmod>2021-07-22</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://www.zeker.top/</loc>
@@ -116,7 +116,7 @@
 
   
   <url>
-    <loc>https://www.zeker.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://www.zeker.top/tags/%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2022-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -130,14 +130,14 @@
   </url>
   
   <url>
-    <loc>https://www.zeker.top/tags/%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://www.zeker.top/tags/Spring-boot/</loc>
     <lastmod>2022-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.zeker.top/tags/Spring-boot/</loc>
+    <loc>https://www.zeker.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2022-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
