@@ -13,6 +13,7 @@
     transition: transform 50ms ease-in-out;
     width: auto;
     -webkit-tap-highlight-color: transparent;
+    padding-right: 150px;
 }
 .tip-button:active {
     transform: rotate(4deg);
