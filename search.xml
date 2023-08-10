@@ -8,7 +8,7 @@
       <link href="/posts/bb3290a1/"/>
       <url>/posts/bb3290a1/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>前言</h1><p>哈喽，距离上一篇文章的发布还是在上次（doge）嘻嘻，其实也就一年半而已啦，想凑个两年半来着（别打我错了），想想这一年经历了很多，考研、找实习、论文、毕业，还有学习…</p><p>其实不是我想鸽，我也一直在学习状态，只是因为找不到合适写的点。</p><p>加之我的<strong>网站宗旨：坚持原创，反对抄袭转载</strong>。很多文章确实很详细了，也没必要过多解读、转载，毕竟我深受其害。</p><p>好了，回到正题，今天的文章是关于<code>Twikoo</code>找回暗号及密码，别问我怎么想写这个的，刚摸索找回来的/(ㄒoㄒ)/~~</p><h1>自身部署说明</h1><p>我的<code>Twikoo</code>是通过<code>Vercel</code>部署的，以下也是针对这个情况的。</p><p>详情请前往 🔗<a href="https://twikoo.js.org/">Twikoo文档</a></p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-1.5qk479lo67g0.jpg" alt="部署说明"></p><p>可以看到说明中提到了<code>MongoDB</code>和<code>Vercel</code>，我们主要是从这两方面找。</p><h1>修改MongoDB配置</h1><p>进入<code>MongoDB Atlas</code>中，在自己创建的项目下</p><p><code>SECURITY</code> &gt; <code>Network Access</code> &gt; <code>Edit</code> &gt;  修改网络允许为所有人</p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-2.jpg" alt="修改MongoDB配置"></p><h1>查看Vercel配置URI</h1><p>进入自己的<code>Vercel</code>主页页面，点击自己之前按照提示创建的项目</p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-3.jpg" alt="查看Vercel配置URI-1"></p><p>进入后 <code>Settings</code> &gt; <code>Environment Variables</code>，找到自己的<code>MONGODB_URI</code>，复制<code>URI</code></p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-4.jpg" alt="查看Vercel配置URI-2"></p><h1>连接MongoDB</h1><p>连接<code>MongoDB</code>有两种方式：</p><ol><li>MongoDB Compass</li><li>MangoDB for VS Code</li></ol><h2 id="MongoDB-Compass">MongoDB Compass</h2><p>下载请前往🔗<a href="https://blog.csdn.net/GyaoG/article/details/123468294">MongoDB可视化管理工具-MongoDB Compass</a></p><p>将上面复制好的<code>URI</code>粘贴到<code>URI框</code>中，之后连接即可</p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-5.jpg" alt="MongoDB Compass"></p><h2 id="MongoDB-for-VS-Code">MongoDB for VS Code</h2><p><code>VScode</code>的插件，直接在扩展中搜索安装即可。</p><p>按下图顺序将<code>URI</code>复制到指定框中，回车连接即可。</p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-6.jpg" alt="MangoDB for VS Code"></p><h1>查看MongoDB数据</h1><p>上面任意一种方式进入<code>MongoDB</code>中，在<code>myFirstDatabase</code>下的<code>config表</code>中可以找到全部配置信息，可以自行查看修改</p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-7.jpg" alt="查看MongoDB数据"></p><p>其中，<code>ADMIN_PASS</code>是评论管理的密码， <code>HIDE_ADMIN_CRYPT</code>是评论管理的暗号（显示管理入口的）</p><div class="note info flat"><p>手动删除<code>ADMIN_PASS</code>密码，重新登录twikoo就可以重新配置密码了</p></div><h1>课余小知识</h1><p>据测试，<code>ADMIN_PASS</code>的加密方式为两层md5加密，即<code>md5(md5(password))</code></p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-8.jpg" alt="课余小知识"></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>前言</h1><p>哈喽，距离上一篇文章的发布还是在上次（doge）嘻嘻，其实也就一年多而已啦（别打我错了），想想这一年经历了很多，考研、找实习、论文、毕业，还有学习…</p><p>其实不是我想鸽，我也一直在学习状态，只是因为找不到合适写的点。</p><p>加之我的<strong>网站宗旨：坚持原创，反对抄袭转载</strong>。很多文章确实很详细了，也没必要过多解读、转载，毕竟我深受其害。</p><p>好了，回到正题，今天的文章是关于<code>Twikoo</code>找回暗号及密码，别问我怎么想写这个的，刚摸索找回来的/(ㄒoㄒ)/~~</p><h1>自身部署说明</h1><p>我的<code>Twikoo</code>是通过<code>Vercel</code>部署的，以下也是针对这个情况的。</p><p>详情请前往 🔗<a href="https://twikoo.js.org/">Twikoo文档</a></p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-1.5qk479lo67g0.jpg" alt="部署说明"></p><p>可以看到说明中提到了<code>MongoDB</code>和<code>Vercel</code>，我们主要是从这两方面找。</p><h1>修改MongoDB配置</h1><p>进入<code>MongoDB Atlas</code>中，在自己创建的项目下</p><p><code>SECURITY</code> &gt; <code>Network Access</code> &gt; <code>Edit</code> &gt;  修改网络允许为所有人</p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-2.jpg" alt="修改MongoDB配置"></p><h1>查看Vercel配置URI</h1><p>进入自己的<code>Vercel</code>主页页面，点击自己之前按照提示创建的项目</p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-3.jpg" alt="查看Vercel配置URI-1"></p><p>进入后 <code>Settings</code> &gt; <code>Environment Variables</code>，找到自己的<code>MONGODB_URI</code>，复制<code>URI</code></p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-4.jpg" alt="查看Vercel配置URI-2"></p><h1>连接MongoDB</h1><p>连接<code>MongoDB</code>有两种方式：</p><ol><li>MongoDB Compass</li><li>MangoDB for VS Code</li></ol><h2 id="MongoDB-Compass">MongoDB Compass</h2><p>下载请前往🔗<a href="https://blog.csdn.net/GyaoG/article/details/123468294">MongoDB可视化管理工具-MongoDB Compass</a></p><p>将上面复制好的<code>URI</code>粘贴到<code>URI框</code>中，之后连接即可</p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-5.jpg" alt="MongoDB Compass"></p><h2 id="MongoDB-for-VS-Code">MongoDB for VS Code</h2><p><code>VScode</code>的插件，直接在扩展中搜索安装即可。</p><p>按下图顺序将<code>URI</code>复制到指定框中，回车连接即可。</p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-6.jpg" alt="MangoDB for VS Code"></p><h1>查看MongoDB数据</h1><p>上面任意一种方式进入<code>MongoDB</code>中，在<code>myFirstDatabase</code>下的<code>config表</code>中可以找到全部配置信息，可以自行查看修改</p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-7.jpg" alt="查看MongoDB数据"></p><p>其中，<code>ADMIN_PASS</code>是评论管理的密码， <code>HIDE_ADMIN_CRYPT</code>是评论管理的暗号（显示管理入口的）</p><div class="note info flat"><p>手动删除<code>ADMIN_PASS</code>密码，重新登录twikoo就可以重新配置密码了</p></div><h1>课余小知识</h1><p>据测试，<code>ADMIN_PASS</code>的加密方式为两层md5加密，即<code>md5(md5(password))</code></p><p><img src="https://cdn.jsdelivr.net/gh/ZekerTop/images@main/20230810/twikoo-8.jpg" alt="课余小知识"></p>]]></content>
       
       
       <categories>
@@ -289,9 +289,9 @@
       
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 数据库 </tag>
             
             <tag> 学习笔记 </tag>
             
@@ -320,9 +320,9 @@
       
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 数据库 </tag>
             
             <tag> 学习笔记 </tag>
             
@@ -351,9 +351,9 @@
       
         <tags>
             
-            <tag> Redis </tag>
-            
             <tag> 配置 </tag>
+            
+            <tag> Redis </tag>
             
             <tag> Spring boot </tag>
             
@@ -382,9 +382,9 @@
       
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 数据库 </tag>
             
             <tag> 学习笔记 </tag>
             
@@ -413,9 +413,9 @@
       
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 数据库 </tag>
             
         </tags>
       
@@ -442,9 +442,9 @@
       
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 数据库 </tag>
             
         </tags>
       
