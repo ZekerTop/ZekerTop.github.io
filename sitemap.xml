@@ -228,7 +228,7 @@
 
   
   <url>
-    <loc>https://www.zeker.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://www.zeker.top/tags/%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2024-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -242,13 +242,6 @@
   </url>
   
   <url>
-    <loc>https://www.zeker.top/tags/%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2024-06-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zeker.top/tags/Spring-boot/</loc>
     <lastmod>2024-06-16</lastmod>
     <changefreq>daily</changefreq>
@@ -256,7 +249,7 @@
   </url>
   
   <url>
-    <loc>https://www.zeker.top/tags/ChatGPT/</loc>
+    <loc>https://www.zeker.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2024-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -264,6 +257,13 @@
   
   <url>
     <loc>https://www.zeker.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zeker.top/tags/ChatGPT/</loc>
     <lastmod>2024-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -370,14 +370,14 @@
   </url>
   
   <url>
-    <loc>https://www.zeker.top/categories/ChatGPT/</loc>
+    <loc>https://www.zeker.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/</loc>
     <lastmod>2024-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.zeker.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/</loc>
+    <loc>https://www.zeker.top/categories/ChatGPT/</loc>
     <lastmod>2024-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
